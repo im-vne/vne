@@ -1,2 +1,2 @@
-hello 
-this is valerie
+Hello!
+This is valerie's website
