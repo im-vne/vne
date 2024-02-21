@@ -40,5 +40,168 @@
     <meta name="text:tag 5" content="tag">
     <meta name="text:tag 6" content="tag">
     
+    body {
+      background-color:{color:background};
+      background-image:url('{image:background}');
+      background-attachment:fixed;
+      background-position:center center;
+      {block:ifnotbackgroundpattern}
+      background-repeat:no-repeat;
+      background-size:cover;
+      {/block:ifnotbackgroundpattern}
+      {block:ifbackgroundpattern}
+      background-repeat:repeat;
+      background-size:auto;
+      {/block:ifbackgroundpattern}
+      color:{color:text};
+      font-family: 'Karla', sans-serif;
+      font-size:{select:fontsize};
+      line-height:calc({select:fontsize} + 6px);
+      font-weight:300;
+      text-align:justify;
+      margin:0;
+    }
+    
+  a {
+      color:{color:text};
+      text-decoration:none;
+      -moz-transition-duration: 0.5s;
+      -o-transition-duration: 0.5s;
+      -webkit-transition-duration: 0.5s;
+      transition-duration: 0.5s;
+    }
+    
+  a:hover {
+      color:{color:text};
+      text-decoration:none;
+    }
+    
+  p a, .side-info-inner a, li a
+  {box-shadow:{color:border} 0px -1px 0px inset;}
+  p a:hover, .side-info-inner a:hover, li a:hover
+  {box-shadow:{color:link} 0px -12px 0px inset;}
+  
+  img {
+      border:none;
+      text-decoration:none;
+  }
+  
+  b, strong, bold {
+      font-weight:800;
+  }
+  
+  u {
+      text-decoration:none;
+  }
+  
+      .firstletter, u {
+          display:block;
+          float:left;
+          padding:12px 14px;
+          background:{color:posts};
+          color:{color:text};
+          font-weight:800;
+          text-transform:uppercase;
+          font-size:calc({select:fontsize} + 4px);
+          margin:0px 10px 0px 0px;
+          border:1px solid {color:border};
+          border-radius:10px;
+      }
+  
+  s, strike {
+      text-decoration-color:{color:accent one};
+  }
+  
+  small, sub, sup, big {
+      font-size:{select:fontsize};
+      line-height:calc({select:fontsize} + 6px);
+      vertical-align:baseline;
+  }
+  
+  blockquote {
+      padding:0px 5px 0px 15px;
+      border-left:1px solid {color:border};
+      margin-left:5px;
+      margin-right:0px;
+  }
+  
+      blockquote img {
+          max-width:360px;
+          height:auto;
+      }
+      
+          blockquote blockquote {
+              margin-right:0px;
+          }
+          
+              blockquote blockquote img {
+                  max-width:350px;
+                  height:auto;
+                  margin-top:10px;
+              }
+  
+  pre {
+      font-family: 'Poppins', sans-serif;
+      font-weight:600;
+      font-size:calc({select:fontsize} + 2px);
+      text-align:center;
+      padding:10px;
+      margin:0px;
+      border:1px solid {color:border};
+      border-radius:40px;
+  }
+  
+      pre i, pre em, pre b, pre strong, pre a {
+          color:{color:text};
+      }
+  
+  ul {
+      padding-left:15px;
+  }
+  
+      ul li {
+          list-style-type:none;
+      }
+      
+          ul li:before {
+            content: "— ";
+            text-indent: -5px;
+          }
+          
+  hr {
+      border:none;
+      border-bottom:1px solid {color:border};
+      width:calc(100% - 150px);
+      margin:20px auto 20px auto;
+  }
+  
+  /* --- header styles --- */
+  
+  h1 {
+      margin:0px 0px 20px 0px;
+      font-family: 'Poppins', sans-serif;
+      font-weight:600;
+      font-size:calc({select:fontsize} + 8px);
+  }
+  
+  h2 {
+      font-weight:400;
+      text-align:left;
+      text-transform:uppercase;
+      font-size:calc({select:fontsize} + 2px);
+      letter-spacing:1px;
+      word-spacing:2px;
+  }
+  
+      h2 b, b h2, h2 i, i h2,
+      h2 strong, strong h2, h2 em, em h2 {
+          color:{color:text};
+      }
+      
+  h3 {
+      font-size:calc({select:fontsize} + 4px);
+      font-weight:400;
+      margin:10px 0px;
+  }
   </head>
 </html>
